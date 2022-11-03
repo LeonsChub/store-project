@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -47,7 +47,8 @@ table {
 	border-spacing: 0;
 }
 :root{
-    --card-dimension:150px;
+    --card-dimension:165px;
+    font-family: 'Roboto' ,sans-serif;
 }
 img{
     max-width: 100%;
@@ -58,38 +59,40 @@ img{
 }
 
 header{
-    background-color: lightgreen;
+    background-color: #26a69a;
 }
 
 header > h1{
     font-size: 32px;
     padding: 1rem;
+    font-weight: bold;
 }
 
 main{
-    background-color: lightgray;
+    background-color: white;
     padding: 1rem;
     min-height: calc(85vh - 1rem - 32px);
 }
 
 footer{
     background-color: aquamarine;
-    height: 12vh;
+    height: 13vh;
 }
 
 #cards-wrap{
-    max-width: 60%;
+    width: 350px;
     display: grid;
     grid-template-columns: repeat(auto-fill, var(--card-dimension));
     grid-auto-rows: 1fr;
     margin-inline: auto;
-
-    padding: 1em;
     gap: 1rem;
 }
+a{
+    text-decoration: none; /* no underline */
+  }
 
 .card{
-    background-color: brown;
+    background-color: #b2dfdb;
     width: var(--card-dimension);
     height: var(--card-dimension);   
 }
@@ -101,12 +104,34 @@ footer{
 .card{
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
+    text-align: center;
 }
 
-.card>img{
+.card> img{
     padding-top: 5%;
     width: 80%;
-    height: 80%;
+    min-height: 80%;
+
+    margin-inline: auto;
+}
+
+.card>a{
+    padding-top: 4px;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding-inline: 1rem;
+}
+
+footer>a{
+    margin-right: 1em;
+    color: black;
 
 }
+
