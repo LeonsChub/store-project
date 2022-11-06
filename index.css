@@ -168,3 +168,36 @@ section{
 section#content>p{
     margin-block: 32px;
 }
+
+#contact-form,
+#contact-form > .main-identifiers{
+    display: flex;
+    flex-flow: column;
+}
+
+#contact-form > .main-identifiers{
+    display: flex;
+    flex-flow: column;
+}
+
+#contact-form,.callToAction{
+    width: 50%;
+    margin-inline:auto;
+}
+
+.main-identifiers,
+.secondary-identifiers{
+margin-block: 24px;
+}
+
+.textIn{
+    width: 60%;
+}
+
+.callToAction{
+    margin-top: 16px;
+}
+
+.secondary-identifiers > input[input="file"]{
+    padding-top: 8px;
+}
