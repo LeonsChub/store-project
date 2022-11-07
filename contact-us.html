@@ -14,48 +14,58 @@
 
     <h1 class="callToAction">Please leave your contact information with us!</h1>
 
-    <form action="./home.html" id="contact-form">
+    <form action="./home.html" method="get" id="contact-form">
       <div class="main-identifiers">
-        <label for="fNameForm">first name:</label>
-        <input
-          type="text"
-          name="firstName"
-          id="fNameForm"
-          class="textIn"
-          required
-        />
+        <div id="first-name-wrap" class="input-label-wrap">
+          <label for="fNameForm">first name:</label>
+          <input
+            type="text"
+            name="firstName"
+            id="fNameForm"
+            class="textIn"
+            required
+          />
+        </div>
+        <div id="last-name-wrap" class="input-label-wrap">
+          <label for="lNameForm" id="lName">last name:</label>
+          <input
+            type="text"
+            name="lastName"
+            id="lNameForm"
+            class="textIn"
+            required
+          />
+        </div>
 
-        <label for="lNameForm">last name:</label>
-        <input
-          type="text"
-          name="lastName"
-          id="lNameForm"
-          class="textIn"
-          required
-        />
-
-        <label for="phoneForm">Phone number:</label>
-        <input
-          type="text"
-          name="phone"
-          id="phoneForm"
-          class="textIn"
-          required
-        />
+        <div class="phone-wrap input-label-wrap">
+          <label for="phoneForm">Phone number:</label>
+          <input
+            type="text"
+            name="phone"
+            id="phoneForm"
+            class="textIn"
+            pattern="\d{10}"
+            required
+          />
+        </div>
       </div>
 
-      <label for="messageForm" required>Leave a message</label>
-      <textarea name="message" id="messageForm" cols="30" rows="10"></textarea>
+      <label for="messageForm" id="" required>Leave a message</label>
+      <textarea name="message" id="messageForm" cols="20" rows="10"></textarea>
 
       <div class="secondary-identifiers">
-        <label for="gender">Sex:</label>
-        <input type="radio" name="gender" id="genderFormMale" />
-        <label for="genderFormMale">Male</label>
-        <input type="radio" name="gender" id="genderFormFemale" />
-        <label for="genderFormFemale">Female</label>
+        <div class="radio-wrap">
+          <label for="gender">Sex:</label>
+          <input type="radio" name="gender" id="genderFormMale" required />
+          <label for="genderFormMale">Male</label>
+          <input type="radio" name="gender" id="genderFormFemale" required />
+          <label for="genderFormFemale">Female</label>
+        </div>
 
-        <label for="fileForm">Upload a file:</label>
-        <input type="file" name="file" id="fileForm" />
+        <div class="file-wrap">
+          <label for="fileForm">Upload a file:</label>
+          <input type="file" name="file" id="fileForm" />
+        </div>
       </div>
 
       <div class="btn-wrap">
@@ -63,5 +73,9 @@
         <input type="reset" />
       </div>
     </form>
+
+    <footer>
+      <a href="./about.html"><p>About us</p></a>
+    </footer>
   </body>
 </html>

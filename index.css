@@ -58,6 +58,15 @@ img{
     box-sizing: border-box;
 }
 
+body{
+    min-height: 100vh;
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
 header{
     background-color: #26a69a;
 }
@@ -80,7 +89,7 @@ main{
 
 footer{
     background-color: aquamarine;
-    height: 13vh;
+    height: 7vh;
 }
 
 #cards-wrap{
@@ -143,7 +152,9 @@ section{
     width: 80%;
     margin-inline: auto;
 }
-
+.name{
+    margin-top: 4px;
+}
 .split{
     margin-top: 2rem;
     display: flex;
@@ -153,6 +164,12 @@ section{
     flex-basis: 300px;
 
     align-items: center;
+
+    background-color: #26a69a;
+    padding: 6px;
+
+    border: 6px solid #093430;
+    border-radius: 10px;
 }
 
 .split > *{
@@ -162,6 +179,8 @@ section{
 }
 
 .split>.about-text{
+    display: flex;
+    align-items: center;
     min-height: 100%;
 }
 
@@ -169,35 +188,63 @@ section#content>p{
     margin-block: 32px;
 }
 
-#contact-form,
-#contact-form > .main-identifiers{
+#contact-form{
+    
     display: flex;
     flex-flow: column;
+
+    background-color: #26a69a;
+    border: 6px solid #093430;
+    border-radius: 10px;
+
+    padding: 8px;
+
+    margin-bottom: 5%;
 }
 
 #contact-form > .main-identifiers{
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
+
+    align-items: center;
 }
 
 #contact-form,.callToAction{
-    width: 50%;
+    width: max(600px,45%);
     margin-inline:auto;
 }
 
-.main-identifiers,
-.secondary-identifiers{
-margin-block: 24px;
-}
-
-.textIn{
-    width: 60%;
-}
-
 .callToAction{
-    margin-top: 16px;
+    font-size: 1.5em;
+    font-weight: bold;
+
+    text-align: center;
 }
 
-.secondary-identifiers > input[input="file"]{
-    padding-top: 8px;
+.input-label-wrap{
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+}
+
+.secondary-identifiers{
+    display: flex;
+    flex-direction: column;
+
+}
+#messageForm{
+    resize: none;
+
+    margin-block: 12px;
+}
+
+.radio-wrap,.file-wrap{
+    margin-bottom: 6px;
+}
+
+.btn-wrap{
+    margin-top: 16px;
 }
