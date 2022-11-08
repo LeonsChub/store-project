@@ -48,6 +48,7 @@ table {
 }
 main{
     padding: 0;
+    height: 100%;
 }
 :root{
     --card-dimension:165px;
@@ -93,7 +94,7 @@ footer{
     background-color: aquamarine;
     height: 7vh;
 
-    position: relative;
+    position: absolute;
     bottom: 0;
     width: 100vw;
 }
@@ -388,7 +389,7 @@ button.nav-item:hover{
 }
 
 #product-showcase{
-    width: 80%;
+    width: max(600px,80%);
     margin-inline: auto;
     
     display: grid;
@@ -404,7 +405,7 @@ button.nav-item:hover{
     width: 100%;
     display: flex;
     justify-content: space-between;
-
+    height: 180px;
     position: relative;
 }
 .card-image{
@@ -412,7 +413,7 @@ button.nav-item:hover{
 }
 
 #product-showcase > .pricing-card > .card-image > img{
-    height: 100%
+    height: min(150px,100%)
 }
 
 .card-description{
