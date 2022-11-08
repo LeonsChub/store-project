@@ -5,8 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    SHOOOOOOOOOOOOEEEEEEEEESSSSSSS
+    <header class="head">
+      <h1><a href="home.html">Shopify</a></h1>
+    </header>
+    <nav id="browse-nav">
+      <button onclick="location.href = './men.html';" class="nav-item">
+        Men
+      </button>
+
+      <button onclick="location.href = './women.html';" class="nav-item">
+        Women
+      </button>
+
+      <button onclick="location.href = './shoes.html';" class="nav-item">
+        Shoes
+      </button>
+
+      <select onchange="location = this.value;" class="nav-item">
+        <option value="">Social media</option>
+        <option value="www.facebook.com">Facebook</option>
+        <option value="www.instagram.com">Instagram</option>
+        <option value="www.twitter.com">Twitter</option>
+      </select>
+    </nav>
+
+    <main>
+      <div class="choose">
+        <div class="man">
+          <button
+            onclick="location.href = './menPricePage/shoes.html';"
+          ></button>
+        </div>
+        <div class="woman">
+          <button
+            onclick="location.href = './womenPricePage/shoes.html';"
+          ></button>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

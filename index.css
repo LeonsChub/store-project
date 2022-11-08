@@ -431,3 +431,37 @@ button.nav-item:hover{
     right: 8px;
 }
 
+.choose{
+    width: 80%;
+    margin-inline:auto;
+
+    display: flex;
+}
+
+.choose > div{
+    width: 50%;
+    text-align: center;
+}
+
+.choose>div>button{
+    width: 15em;
+    height: 15em;
+    border-radius: 10px;
+
+}
+
+.man > button{
+    background-image: url(./images/male-gender.png);
+    background-size: 15em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: blue;
+}
+
+.woman > button{
+    background-image: url(./images/femenine.png);
+    background-size: 15em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: pink;
+}
