@@ -48,10 +48,10 @@ table {
 }
 main{
     padding: 0;
-    height: 100%;
+    overflow: hidden;
 }
 :root{
-    --card-dimension:150px;
+    --card-dimension:250px;
     font-family: 'Roboto' ,sans-serif;
 }
 img{
@@ -60,13 +60,6 @@ img{
 }
 *{
     box-sizing: border-box;
-}
-
-body{
-    min-height: 100vh;
-    flex-direction: column;
-
-    justify-content: space-between;
 }
 
 
@@ -84,25 +77,27 @@ a {
     color: #093430;
 }
 
-main{
-    background-color: white;
-    position: relative;
-   /* min-height: (80vh - 40px - 1rem);*/
-}
 
 footer{
     background-color: aquamarine;
     height: 7vh;
 
-    position: absolute;
-    bottom: 0;
     width: 100vw;
+    position: relative;
+}
+
+main{
+    min-height: 76.8vh;
+}
+
+main#contact-main-content{
+    min-height: 76.3vh;
 }
 
 #cards-wrap{
-    width: 500px;
+    width: fit-content;
     display: grid;
-    grid-template-columns: repeat(auto-fill, var(--card-dimension));
+    grid-template-columns: repeat(3, var(--card-dimension));
     grid-auto-rows: 1fr;
     margin-inline: auto;
     gap: 1rem;
@@ -126,6 +121,7 @@ a{
     display: flex;
     flex-flow: column nowrap;
     text-align: center;
+
 }
 
 .card> img{
@@ -137,7 +133,7 @@ a{
 }
 
 .card>a{
-    padding-top: 4px;
+    padding-top:10px;
     color: rgb(255, 255, 255);
     font-weight: 300;
 }
@@ -197,9 +193,10 @@ section{
 section#content>p{
     margin-block: 32px;
 }
-
-.callToAction{
-    margin-block-start:1em;
+#contact-main-content{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
 }
 
 #contact-form{
@@ -213,9 +210,10 @@ section#content>p{
 
     padding: 8px;
 
-    margin-bottom: 5%;
 }
-
+h1.callToAction{
+    font-size: 2.5em;
+}
 #contact-form > .main-identifiers{
     display: flex;
     flex-direction: column;
@@ -255,13 +253,14 @@ section#content>p{
     margin-block: 12px;
 }
 
-.radio-wrap,.file-wrap{
-    margin-bottom: 6px;
+.radio-wrap{
+    margin-bottom: 8px;
 }
 
 .btn-wrap{
-    margin-top: 16px;
+    margin-top: 24px;
 }
+
 #browse-nav{
     position: relative;
     display: flex;
@@ -337,15 +336,15 @@ button.nav-item:hover{
     padding-inline: 1em;
 
     width: 100%;
-    height: 150px;
+    height: 160px;
 
 }
 div.fullrow{
     justify-content: space-around;
 }
 .product > img{
-    border-radius: 5px;
-    height: min(100%,100px);
+    border-radius: 50%;
+    height: 90%;
 }
 
 .description-wrap{
@@ -452,6 +451,7 @@ div.fullrow{
     margin-inline:auto;
 
     display: flex;
+
 }
 
 .choose > div{
@@ -462,22 +462,47 @@ div.fullrow{
 .choose>div>button{
     width: 15em;
     height: 15em;
-    border-radius: 10px;
+    border-radius: 50%;
+    border: 2px solid lightgray;
+    cursor: pointer;
+}
+
+.choose>div>button:hover{
+
+    border: 2px solid rgb(0, 0, 0);
 
 }
 
 .man > button{
     background-image: url(./images/male-gender.png);
-    background-size: 15em;
+    background-size: 10em;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: blue;
+    background-color: rgb(75, 182, 249);
 }
 
 .woman > button{
     background-image: url(./images/femenine.png);
-    background-size: 15em;
+    background-size: 10em;
     background-repeat: no-repeat;
     background-position: center;
     background-color: pink;
+}
+
+#main-shoes-content{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+#main-shoes-content h2{
+    font-size: 1.5em;
+    margin-bottom:40px ;
+}
+
+#main-shoes-content .callToAction{
+    margin-bottom: 15vh;
+}
+main .callToAction{
+    margin-block: 6.4vh;
 }

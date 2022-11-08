@@ -34,67 +34,63 @@
       </nav>
     </div>
 
-    <h1 class="callToAction">Please leave your contact information with us!</h1>
-
-    <form action="./home.html" method="get" id="contact-form">
-      <div class="main-identifiers">
-        <div id="first-name-wrap" class="input-label-wrap">
-          <label for="fNameForm">first name:</label>
-          <input
-            type="text"
-            name="firstName"
-            id="fNameForm"
-            class="textIn"
-            required
-          />
+    <main id = "contact-main-content">
+      <h1 class="callToAction">Please leave your contact information with us!</h1>
+      <form action="./home.html" method="get" id="contact-form">
+        <div class="main-identifiers">
+          <div id="first-name-wrap" class="input-label-wrap">
+            <label for="fNameForm">first name:</label>
+            <input
+              type="text"
+              name="firstName"
+              id="fNameForm"
+              class="textIn"
+              required
+            />
+          </div>
+          <div id="last-name-wrap" class="input-label-wrap">
+            <label for="lNameForm" id="lName">last name:</label>
+            <input
+              type="text"
+              name="lastName"
+              id="lNameForm"
+              class="textIn"
+              required
+            />
+          </div>
+          <div class="phone-wrap input-label-wrap">
+            <label for="phoneForm">Phone number:</label>
+            <input
+              type="text"
+              name="phone"
+              id="phoneForm"
+              class="textIn"
+              pattern="\d{10}"
+              required
+            />
+          </div>
         </div>
-        <div id="last-name-wrap" class="input-label-wrap">
-          <label for="lNameForm" id="lName">last name:</label>
-          <input
-            type="text"
-            name="lastName"
-            id="lNameForm"
-            class="textIn"
-            required
-          />
+        <label for="messageForm" id="" required>Leave a message</label>
+        <textarea name="message" id="messageForm" cols="20" rows="10"></textarea>
+        <div class="secondary-identifiers">
+          <div class="radio-wrap">
+            <label for="gender">Sex:</label>
+            <input type="radio" name="gender" id="genderFormMale" required />
+            <label for="genderFormMale">Male</label>
+            <input type="radio" name="gender" id="genderFormFemale" required />
+            <label for="genderFormFemale">Female</label>
+          </div>
+          <div class="file-wrap">
+            <label for="fileForm">Upload a file:</label>
+            <input type="file" name="file" id="fileForm" />
+          </div>
         </div>
-
-        <div class="phone-wrap input-label-wrap">
-          <label for="phoneForm">Phone number:</label>
-          <input
-            type="text"
-            name="phone"
-            id="phoneForm"
-            class="textIn"
-            pattern="\d{10}"
-            required
-          />
+        <div class="btn-wrap">
+          <input type="submit" />
+          <input type="reset" />
         </div>
-      </div>
-
-      <label for="messageForm" id="" required>Leave a message</label>
-      <textarea name="message" id="messageForm" cols="20" rows="10"></textarea>
-
-      <div class="secondary-identifiers">
-        <div class="radio-wrap">
-          <label for="gender">Sex:</label>
-          <input type="radio" name="gender" id="genderFormMale" required />
-          <label for="genderFormMale">Male</label>
-          <input type="radio" name="gender" id="genderFormFemale" required />
-          <label for="genderFormFemale">Female</label>
-        </div>
-
-        <div class="file-wrap">
-          <label for="fileForm">Upload a file:</label>
-          <input type="file" name="file" id="fileForm" />
-        </div>
-      </div>
-
-      <div class="btn-wrap">
-        <input type="submit" />
-        <input type="reset" />
-      </div>
-    </form>
+      </form>
+    </main>
 
     <footer>
       <a href="./about.html"><p>About us</p></a>
