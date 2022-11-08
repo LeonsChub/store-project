@@ -51,7 +51,7 @@ main{
     height: 100%;
 }
 :root{
-    --card-dimension:165px;
+    --card-dimension:150px;
     font-family: 'Roboto' ,sans-serif;
 }
 img{
@@ -87,7 +87,7 @@ a {
 main{
     background-color: white;
     position: relative;
-    min-height: (80vh - 32px - 1rem);
+   /* min-height: (80vh - 40px - 1rem);*/
 }
 
 footer{
@@ -100,12 +100,13 @@ footer{
 }
 
 #cards-wrap{
-    width: 350px;
+    width: 500px;
     display: grid;
     grid-template-columns: repeat(auto-fill, var(--card-dimension));
     grid-auto-rows: 1fr;
     margin-inline: auto;
     gap: 1rem;
+    margin-top: 40px;
 }
 a{
     text-decoration: none; /* no underline */
@@ -303,33 +304,48 @@ button.nav-item:hover{
 
     right: 2%;
 }
-.product-row{
-    width: 90%;
-    margin-inline:auto;
-    margin-top: 1em;
+#grid-products{
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr  ;
+
+    gap: 0.5em;
+
+    width: 80%;
+    margin-inline: auto;
+
+    grid-template-areas: "full1 full1 full1 full1 full1 full1"
+                         "half1 half1 half1 half2 half2 half2 "
+                         "thir1 thir1 thir2 thir2 thir3 thir3 ";
+}
+
+#jeans-product{grid-area: full1;}
+#shirt-product{grid-area: half1;}
+#tshirt-product,#skirt-product{grid-area: half2;}
+#jacket-product{grid-area: thir1;}
+#accessory-product{grid-area: thir2;}
+#shoe-product{grid-area: thir3;}
+
+.product{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #16e5d3;
+    
+    padding-inline: 1em;
+
+    width: 100%;
     height: 150px;
 
-    display: flex;
 }
-.product{
-    background-color: #16e5d3;
-    padding: 0.5em;
-    width: 100%;
-
-}
-.product:not(:first-child){
-    margin-left: 1em;
-}
-.product{
-    display: flex;
-    height: 100%;
-
+div.fullrow{
     justify-content: space-around;
 }
-
 .product > img{
     border-radius: 5px;
-    height: max(100%,100px);
+    height: min(100%,100px);
 }
 
 .description-wrap{
