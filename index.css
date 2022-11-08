@@ -46,6 +46,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+main{
+    padding: 0;
+}
 :root{
     --card-dimension:165px;
     font-family: 'Roboto' ,sans-serif;
@@ -67,6 +70,7 @@ body{
     justify-content: space-between;
 }
 
+
 header{
     background-color: #26a69a;
 }
@@ -77,7 +81,7 @@ header > h1{
     font-weight: bold;
 }
 
-h1 > a {
+a {
     color: #093430;
 }
 
@@ -140,6 +144,8 @@ footer{
     justify-content: flex-start;
 
     padding-inline: 1rem;
+
+    margin-top: 1em;
 }
 
 footer>a{
@@ -249,6 +255,7 @@ section#content>p{
     margin-top: 16px;
 }
 #browse-nav{
+    position: relative;
     display: flex;
     flex: 1 1 0;
 
@@ -259,7 +266,7 @@ section#content>p{
 }
 
 .nav-item{
-    width: 25%;
+    width: fit-content;
     margin-inline: 1em;
     font-size: 1.2em;
 }
@@ -277,6 +284,95 @@ button.nav-item:hover{
     background-color: white;
     color: #093430;
     border: 2px solid #093430;
+
+    -webkit-transition: background-color 0.5s;
+    -webkit-transition: color 0.5s;
+
+    cursor: pointer;
+}
+#browse-nav> select{
+    position: absolute;
+
+    right: 2%;
+}
+.product-row{
+    width: 90%;
+    margin-inline:auto;
+    margin-top: 1em;
+    height: 150px;
+
+    display: flex;
+}
+.product{
+    background-color: #16e5d3;
+    padding: 0.5em;
+    width: 100%;
+
+}
+.product:not(:first-child){
+    margin-left: 1em;
+}
+.product{
+    display: flex;
+    height: 100%;
+
+    justify-content: space-around;
+}
+
+.product > img{
+    border-radius: 30px;
+    height: max(100%,100px);
+}
+
+.description-wrap{
+    display: flex;
+    flex-flow: column;
+    justify-content:center;
+    position: relative;
+}
+
+.description-wrap > h3{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#woman-content .product{
+    background-color: magenta;
+}
+
+#woman-content + footer{
+    background-color: violet;
+}
+
+#woman-content > header{
+    background-color: magenta;
+
+}
+
+#woman-content > header a{ 
+    color:black;
+    
+}
+
+#woman-content > nav {
+    background-color: rgb(141, 11, 141);
+}
+
+#woman-content > nav >button.nav-item{
+    font-weight: bold;
+    background-color: pink;
+    color: white;
+    border: 2px solid magenta;
+
+    border-radius: 5px;
+}
+
+#woman-content > nav >button.nav-item:hover{
+    background-color: magenta;
+    color: black;
+    border: 2px solid white;
 
     -webkit-transition: background-color 0.5s;
     -webkit-transition: color 0.5s;

@@ -13,14 +13,23 @@
         <h1><a href="home.html">Shopify</a></h1>
       </header>
       <nav id="browse-nav">
-        <button class="nav-item">Men</button
-        ><button class="nav-item">Women</button
-        ><button class="nav-item">Shoes</button>
-        <select class="nav-item">
+        <button onclick="location.href = './men.html';" class="nav-item">
+          Men
+        </button>
+
+        <button onclick="location.href = './women.html';" class="nav-item">
+          Women
+        </button>
+
+        <button onclick="location.href = './shoes.html';" class="nav-item">
+          Shoes
+        </button>
+
+        <select onchange="location = this.value;" class="nav-item">
           <option value="">Social media</option>
-          <option value="">Facebook</option>
-          <option value="">Instagram</option>
-          <option value="">Twitter</option>
+          <option value="www.facebook.com">Facebook</option>
+          <option value="www.instagram.com">Instagram</option>
+          <option value="www.twitter.com">Twitter</option>
         </select>
       </nav>
     </div>
