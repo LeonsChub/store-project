@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="head">
+      <h1><a href="../home.html">Shopify</a></h1>
+    </header>
+
+    <nav id="browse-nav">
+      <button onclick="location.href = '../men.html';" class="nav-item">
+        Men</button
+      ><button onclick="location.href = '../women.html';" class="nav-item">
+        Women</button
+      ><button onclick="location.href = '../shoes.html';" class="nav-item">
+        Shoes
+      </button>
+      <select onchange="location = this.value;" class="nav-item">
+        <option value="">Social media</option>
+        <option value="www.facebook.com">Facebook</option>
+        <option value="www.instagram.com">Instagram</option>
+        <option value="www.twitter.com">Twitter</option>
+      </select>
+    </nav>
+
+    <main>
+      <div id="product-showcase">
+        <div class="pricing-card">
+          <div class="card-image">
+            <img
+              src="../images/men/products/tShirtShowcase/shirt1.jpeg"
+              alt=""
+            />
+          </div>
+          <div class="card-description">
+            <p>black T-shirt</p>
+            <p class="price">11.99$</p>
+          </div>
+        </div>
+
+        <div class="pricing-card">
+          <div class="card-image">
+            <img
+              src="../images/men/products/tShirtShowcase/tshirt2.jpg"
+              alt=""
+            />
+          </div>
+          <div class="card-description">
+            <p>blue T-shirt</p>
+            <p class="price">11.99$</p>
+          </div>
+        </div>
+
+        <div class="pricing-card">
+          <div class="card-image">
+            <img
+              src="../images/men/products/tShirtShowcase/tshirt3.webp"
+              alt=""
+            />
+          </div>
+          <div class="card-description">
+            <p>red T-shirt</p>
+            <p class="price">11.99$</p>
+          </div>
+        </div>
+
+        <div class="pricing-card">
+          <div class="card-image">
+            <img
+              src="../images/men/products/tShirtShowcase/tshirt4.webp"
+              alt=""
+            />
+          </div>
+          <div class="card-description">
+            <p>yellow T-shirt</p>
+            <p class="price">11.99$</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="./contact-us.html"><p>Contact us</p></a>
+      <a href="./about.html"><p>About us</p></a>
+    </footer>
+  </body>
+</html>

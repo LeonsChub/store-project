@@ -85,13 +85,17 @@ a {
 
 main{
     background-color: white;
-    padding: 1rem;
-    min-height: calc(85vh - 1rem - 32px);
+    position: relative;
+    min-height: (80vh - 32px - 1rem);
 }
 
 footer{
     background-color: aquamarine;
     height: 7vh;
+
+    position: relative;
+    bottom: 0;
+    width: 100vw;
 }
 
 #cards-wrap{
@@ -265,6 +269,7 @@ section#content>p{
 
     background-color:#16e5d3;
 
+    margin-bottom: 1em;
 }
 
 .nav-item{
@@ -411,6 +416,8 @@ button.nav-item:hover{
 }
 
 .card-description{
+    max-width: 40%;
+    text-align: center;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -422,3 +429,4 @@ button.nav-item:hover{
     bottom: 4px;
     right: 8px;
 }
+

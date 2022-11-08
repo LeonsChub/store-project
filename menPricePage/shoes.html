@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../index.css" />
+  </head>
+  <body>
+    <header class="head">
+      <h1><a href="../home.html">Shopify</a></h1>
+    </header>
+
+    <nav id="browse-nav">
+      <button onclick="location.href = '../men.html';" class="nav-item">
+        Men</button
+      ><button onclick="location.href = '../women.html';" class="nav-item">
+        Women</button
+      ><button onclick="location.href = '../shoes.html';" class="nav-item">
+        Shoes
+      </button>
+      <select onchange="location = this.value;" class="nav-item">
+        <option value="">Social media</option>
+        <option value="www.facebook.com">Facebook</option>
+        <option value="www.instagram.com">Instagram</option>
+        <option value="www.twitter.com">Twitter</option>
+      </select>
+    </nav>
+
+    <main>
+      <div id="product-showcase">
+        <div class="pricing-card">
+          <div class="card-image">
+            <img src="../images/men/products/shoeShowcase/shoe4.jpg" alt="" />
+          </div>
+          <div class="card-description">
+            <p>Blue jeans</p>
+            <p class="price">39.99$</p>
+          </div>
+        </div>
+
+        <div class="pricing-card">
+          <div class="card-image">
+            <img src="../images/men/products/shoeShowcase/shoe1.jpg" alt="" />
+          </div>
+          <div class="card-description">
+            <p>Black jeans</p>
+            <p class="price">49.99$</p>
+          </div>
+        </div>
+
+        <div class="pricing-card">
+          <div class="card-image">
+            <img src="../images/men/products/shoeShowcase/shoe2.jpeg" alt="" />
+          </div>
+          <div class="card-description">
+            <p>Short jeans</p>
+            <p class="price">19.99$</p>
+          </div>
+        </div>
+
+        <div class="pricing-card">
+          <div class="card-image">
+            <img src="../images/men/products/shoeShowcase/shoe3.webp" alt="" />
+          </div>
+          <div class="card-description">
+            <p>skinny jeans jeans</p>
+            <p class="price">39.99$</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="./contact-us.html"><p>Contact us</p></a>
+      <a href="./about.html"><p>About us</p></a>
+    </footer>
+  </body>
+</html>
