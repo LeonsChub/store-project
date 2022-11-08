@@ -248,3 +248,38 @@ section#content>p{
 .btn-wrap{
     margin-top: 16px;
 }
+#browse-nav{
+    display: flex;
+    flex: 1 1 0;
+
+    padding: 0.5em;
+
+    background-color:#16e5d3;
+
+}
+
+.nav-item{
+    width: 25%;
+    margin-inline: 1em;
+    font-size: 1.2em;
+}
+
+button.nav-item{
+    font-weight: bold;
+    background-color: #093430;
+    color: white;
+    border: 2px solid white;
+
+    border-radius: 5px;
+}
+
+button.nav-item:hover{
+    background-color: white;
+    color: #093430;
+    border: 2px solid #093430;
+
+    -webkit-transition: background-color 0.5s;
+    -webkit-transition: color 0.5s;
+
+    cursor: pointer;
+}
