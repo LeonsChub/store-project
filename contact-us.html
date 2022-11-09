@@ -27,15 +27,17 @@
 
         <select onchange="location = this.value;" class="nav-item">
           <option value="">Social media</option>
-          <option value="www.facebook.com">Facebook</option>
-          <option value="www.instagram.com">Instagram</option>
-          <option value="www.twitter.com">Twitter</option>
+          <option value="https://www.facebook.com">Facebook</option>
+          <option value="https://www.instagram.com">Instagram</option>
+          <option value="https://www.twitter.com">Twitter</option>
         </select>
       </nav>
     </div>
 
-    <main id = "contact-main-content">
-      <h1 class="callToAction">Please leave your contact information with us!</h1>
+    <main id="contact-main-content">
+      <h1 class="callToAction">
+        Please leave your contact information with us!
+      </h1>
       <form action="./home.html" method="get" id="contact-form">
         <div class="main-identifiers">
           <div id="first-name-wrap" class="input-label-wrap">
@@ -71,7 +73,12 @@
           </div>
         </div>
         <label for="messageForm" id="" required>Leave a message</label>
-        <textarea name="message" id="messageForm" cols="20" rows="10"></textarea>
+        <textarea
+          name="message"
+          id="messageForm"
+          cols="20"
+          rows="10"
+        ></textarea>
         <div class="secondary-identifiers">
           <div class="radio-wrap">
             <label for="gender">Sex:</label>

@@ -48,10 +48,13 @@ table {
 }
 main{
     padding: 0;
-    overflow: hidden;
 }
 :root{
     --card-dimension:250px;
+    --A100: #d7ccc8;
+    --A200: #bcaaa4;
+    --A400: #8d6e63;
+    --A700: #5d4037;
     font-family: 'Roboto' ,sans-serif;
 }
 img{
@@ -64,7 +67,7 @@ img{
 
 
 header{
-    background-color: #26a69a;
+    background-color: var(--A700);
 }
 
 header > h1{
@@ -74,12 +77,12 @@ header > h1{
 }
 
 a {
-    color: #093430;
+    color: var(--A100);
 }
 
 
 footer{
-    background-color: aquamarine;
+    background-color: var(--A700);
     height: 7vh;
 
     width: 100vw;
@@ -88,10 +91,10 @@ footer{
 
 main{
     min-height: 76.8vh;
-}
-
-main#contact-main-content{
-    min-height: 76.3vh;
+    background-image: url(./images/background.jpg);
+    background-position:center;
+    background-size: 100%;
+    padding-block: 2em;
 }
 
 #cards-wrap{
@@ -101,14 +104,13 @@ main#contact-main-content{
     grid-auto-rows: 1fr;
     margin-inline: auto;
     gap: 1rem;
-    margin-top: 40px;
 }
 a{
     text-decoration: none; /* no underline */
 }
 
 .card{
-    background-color: #b2dfdb;
+    background-color: var(--A200);
     width: var(--card-dimension);
     height: var(--card-dimension);   
 }
@@ -144,8 +146,6 @@ footer{
     justify-content: flex-start;
 
     padding-inline: 1rem;
-
-    margin-top: 1em;
 }
 
 footer>a{
@@ -167,14 +167,13 @@ section{
     flex-flow: row nowrap;
     justify-content: space-between;
     width: 80%;
-    flex-basis: 300px;
-
     align-items: center;
+    margin-bottom: 32px;
 
-    background-color: #26a69a;
+    background-color: var(--A700);
     padding: 6px;
 
-    border: 6px solid #093430;
+    border: 6px solid var(--A400);
     border-radius: 10px;
 }
 
@@ -184,6 +183,14 @@ section{
     text-align: center;
 }
 
+#about-main-content{
+    padding: 0;
+
+    padding-bottom: 32px;
+
+    color: whitesmoke;
+}
+
 .split>.about-text{
     display: flex;
     align-items: center;
@@ -191,7 +198,10 @@ section{
 }
 
 section#content>p{
-    margin-block: 32px;
+    padding: 1em;
+    border: 6px solid var(--A400);
+    background-color: var(--A700);
+    border-radius: 10px;
 }
 #contact-main-content{
     display: flex;
@@ -204,14 +214,15 @@ section#content>p{
     display: flex;
     flex-flow: column;
 
-    background-color: #26a69a;
-    border: 6px solid #093430;
+    background-color: var(--A400);
+    border: 6px solid var(--A100);
     border-radius: 10px;
 
     padding: 8px;
 
 }
 h1.callToAction{
+    color: var(--A700);
     font-size: 2.5em;
 }
 #contact-form > .main-identifiers{
@@ -268,9 +279,7 @@ h1.callToAction{
 
     padding: 0.5em;
 
-    background-color:#16e5d3;
-
-    margin-bottom: 1em;
+    background-color:var(--A400);
 }
 
 .nav-item{
@@ -298,6 +307,12 @@ button.nav-item:hover{
 
     cursor: pointer;
 }
+button.nav-item:nth-child(1):hover{
+    background-color: lightseagreen;
+}
+button.nav-item:nth-child(2):hover{
+    background-color: lightcoral;
+}
 #browse-nav> select{
     position: absolute;
 
@@ -314,7 +329,7 @@ button.nav-item:hover{
     width: 80%;
     margin-inline: auto;
 
-    grid-template-areas: "full1 full1 full1 full1 full1 full1"
+    grid-template-areas: "title title title full1 full1 full1"
                          "half1 half1 half1 half2 half2 half2 "
                          "thir1 thir1 thir2 thir2 thir3 thir3 ";
 
@@ -327,18 +342,33 @@ button.nav-item:hover{
 #jacket-product{grid-area: thir1;}
 #accessory-product{grid-area: thir2;}
 #shoe-product{grid-area: thir3;}
+#grid-title{
+    grid-area: title; 
+    display: flex;
+    justify-content: center;
+align-items: center;}
+
+#grid-title.callToAction{
+    width: 100%;
+    margin: 0;
+    background-color: var(--A400);
+    color: var(--A200);
+
+    text-align: center;
+}
+
 
 .product{
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    background-color: #16e5d3;
+    background-color:var(--A400);
     
     padding-inline: 1em;
 
     width: 100%;
-    height: 160px;
+    height: 180px;
 
 }
 div.fullrow{
@@ -363,48 +393,6 @@ div.fullrow{
     font-size: 1.5em;
 }
 
-#woman-content .product{
-    background-color: magenta;
-}
-
-#woman-content + footer{
-    background-color: violet;
-}
-
-#woman-content > header{
-    background-color: magenta;
-
-}
-
-#woman-content > header a{ 
-    color:black;
-    
-}
-
-#woman-content > nav {
-    background-color: rgb(141, 11, 141);
-}
-
-#woman-content > nav >button.nav-item{
-    font-weight: bold;
-    background-color: pink;
-    color: white;
-    border: 2px solid magenta;
-
-    border-radius: 5px;
-}
-
-#woman-content > nav >button.nav-item:hover{
-    background-color: magenta;
-    color: black;
-    border: 2px solid white;
-
-    -webkit-transition: background-color 0.5s;
-    -webkit-transition: color 0.5s;
-
-    cursor: pointer;
-}
-
 #product-showcase{
     width: max(600px,80%);
     margin-inline: auto;
@@ -417,7 +405,7 @@ div.fullrow{
     gap: 0.5em;
 }
 #product-showcase > .pricing-card{
-    background-color: #16e5d3;
+    background-color: var(--A400);
     padding: 1em;
     width: 100%;
     display: flex;
@@ -500,11 +488,20 @@ div.fullrow{
 #main-shoes-content h2{
     font-size: 1.5em;
     margin-bottom:40px ;
+    color: var(--A100);
 }
 
-#main-shoes-content .callToAction{
-    margin-bottom: 15vh;
-}
 main .callToAction{
     margin-block: 6.4vh;
+}
+
+.product{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
+
+.product > img{
+    height: 50%;
+    
 }
