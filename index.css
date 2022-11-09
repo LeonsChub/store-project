@@ -317,6 +317,8 @@ button.nav-item:hover{
     grid-template-areas: "full1 full1 full1 full1 full1 full1"
                          "half1 half1 half1 half2 half2 half2 "
                          "thir1 thir1 thir2 thir2 thir3 thir3 ";
+
+    margin-bottom: 2em;
 }
 
 #jeans-product{grid-area: full1;}
