@@ -312,6 +312,7 @@ button.nav-item:nth-child(1):hover{
 }
 button.nav-item:nth-child(2):hover{
     background-color: lightcoral;
+    
 }
 #browse-nav> select{
     position: absolute;
@@ -374,9 +375,15 @@ align-items: center;}
 div.fullrow{
     justify-content: space-around;
 }
-.product > img{
+
+.product  img{
     border-radius: 50%;
-    height: 90%;
+    height: 50%;
+    cursor: pointer;
+}
+
+.product img:hover{
+    height: 60%;
 }
 
 .description-wrap{
@@ -501,7 +508,4 @@ main .callToAction{
     justify-content: space-around;
 }
 
-.product > img{
-    height: 50%;
-    
-}
+
